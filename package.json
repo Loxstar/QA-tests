@@ -1,0 +1,26 @@
+{
+  "name": "redventures",
+  "version": "1.0.0",
+  "description": "red ventures assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browserstack": "^1.5.0",
+    "chromedriver": "^2.37.0",
+    "geckodriver": "^1.11.0",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "webdriverio": "^4.12.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.0",
+    "wdio-dot-reporter": "0.0.9",
+    "wdio-mocha-framework": "^0.5.13",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "wdio-webdriver-service": "^0.1.6"
+  }
+}
