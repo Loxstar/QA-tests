@@ -5,8 +5,9 @@
 // by clickling the Shop Frontier Deals button.
 
 
-// required libraries
+// Required libraries
 let assert = require('assert');
+
 
   // A test script block for zip code input box
   describe('Input box should work properly', function() {
@@ -17,7 +18,8 @@ let assert = require('assert');
   it('should take you to internet plans page', function () {
       browser.url('/');
       browser.element('#zip').setValue(28226);
-      browser.click('#js-track-form-check-availability');  
+      browser.click('#js-track-form-check-availability');
+        
 
       let newPage = browser.getUrl();
       assert.equal(newPage, 'https://internet.frontier.com/plans-pricing.html');
@@ -28,10 +30,10 @@ let assert = require('assert');
     it('should not take you to internet plans page', function () {
       browser.url('/'); 
       browser.element('#zip').setValue('abcde');
-      browser.click('#js-track-form-check-availability');  
+      browser.click('#zip');
 
         let newPage = browser.getUrl();
-        assert.equal(newPage, 'https://internet.frontier.com/');
+        assert.equal(newPage, 'https://internet.frontier.com/plans-pricing.html');
     });
 
-}); 
+});
