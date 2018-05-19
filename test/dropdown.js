@@ -6,9 +6,9 @@
 
 
 let expect = require('chai').expect;
-
+ 
 // A test script block for Plans & Pricing dropdown menus
-describe('Plans and Pricing dropdown menu', function() {
+describe('Plans and Pricing dropdown menu', function () {
 
   it('should contain Plans and Pricing text', function () {
     // Open Frontier homepage

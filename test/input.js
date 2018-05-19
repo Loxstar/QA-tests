@@ -8,7 +8,7 @@
 let expect = require('chai').expect;
 
 // A test script block for input box
-  describe('Zip code input field', function() {
+  describe('Zip code input field', function () {
 
   let zipArray = [
     {'zip': 28277},
@@ -17,8 +17,8 @@ let expect = require('chai').expect;
     {'zip': 28105} 
 ];
     // loop through each item in the array 
-  zipArray.forEach(function(x) {
-    it('should enter zip codes and submit form', function() {
+  zipArray.forEach( function (x) {
+    it('should enter zip codes and submit form', function () {
       return browser
       // Home page
       browser.url('/');
@@ -33,14 +33,14 @@ let expect = require('chai').expect;
       })
      
       // Submit the form
-      browser.click('#zip').then( function() {
+      browser.click('#zip').then( function () {
       })
       
-      browser.waitForVisible('#zip', 7000).then(function () {
+      browser.waitForVisible('#zip', 7000).then( function () {
       })
       
       // Get text from url link
-      browser.getText('head > link:nth-child(9)').then(function (link) {
+      browser.getText('head > link:nth-child(9)').then( function (link) {
       // Verify information match
       expect(link).to.equal('https://internet.frontier.com/plans-pricing.html');
       })
