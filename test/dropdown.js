@@ -4,9 +4,11 @@
 // Check and verify text.
 // Check and verify the menu dropdown items.
 
-
+// Required assertion library
 let expect = require('chai').expect;
- 
+// Variable for comparing dropdown links
+let dropLink = browser.getTitle();
+
 // A test script block for Plans & Pricing dropdown menus
 describe('Plans and Pricing dropdown menu', function () {
 
@@ -29,7 +31,7 @@ describe('Plans and Pricing dropdown menu', function () {
     // Click All Plans link
     browser.click('=All Plans');
     // Create variable for page title
-    let dropLink = browser.getTitle();
+    
     // Verify url link to new page and that title matches
     expect(dropLink === 'Frontier Internet Plans | 1-855-860-9937 | Frontier Communications');
   });
@@ -40,7 +42,6 @@ describe('Plans and Pricing dropdown menu', function () {
     browser.click('#menu-item-4313');
     browser.click('=Bundles');
     
-    let dropLink = browser.getTitle();
     expect(dropLink === 'Frontier Bundles | 855-848-1767 | Internet, TV, & Phone');
   });
 
@@ -49,7 +50,6 @@ describe('Plans and Pricing dropdown menu', function () {
     browser.click('#menu-item-4313');
     browser.click('=Frontier FiOS Bundles');
     
-    let dropLink = browser.getTitle();
     expect(dropLink === 'Frontier FiOS Bundles | 855-848-1767 | New Customer Offers');
   });
 
@@ -58,7 +58,6 @@ describe('Plans and Pricing dropdown menu', function () {
     browser.click('#menu-item-4313');
     browser.click('=Frontier Secure');
     
-    let dropLink = browser.getTitle();
     expect(dropLink === 'Frontier Secure | 855-858-2984 | Computer Security');
   });
 });
